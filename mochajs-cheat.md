@@ -1,6 +1,8 @@
 Mocha Cheat Sheet
 =========
-
+Mocha supports multiple interfaces for writing test-suits / test-cases.  
+`mocha --interfcaes` displays supported interfaces
+ 
 ## BDD Interface
 #### `describe`
 Groups the testcases. `describe` can be nested one inside other.  
@@ -116,6 +118,7 @@ suite(), test(), setup(), and teardown().
 
 
 ## Reporters
+The reporting style of the mocha for displaying test results can be changed as per the requirement. Following are some of the popular ones:  
 
 - `dot`: Dot-Matrix style
 - `spec`: Hierarchical view nested just as the test cases are
@@ -126,4 +129,37 @@ suite(), test(), setup(), and teardown().
 - `markdown `
 - `html`
 
-[More reporters](https://github.com/visionmedia/mocha/wiki#interfaces--reporters)
+`mocha -- reporters` will display all the available reporters on command line.
+`mocha -R <name>` allows to set the required reporter through command line.
+
+[Third-Party reporters](https://github.com/visionmedia/mocha/wiki#interfaces--reporters)
+
+
+## Command Line Usage
+
+
+    mocha [debug] [options] [files]
+
+Important Options:  
+(The complete list can be found on official page)
+	
+	  -r, --require <name>        require the given module
+	  -g, --grep <pattern>        only run tests matching <pattern>
+	  -i, --invert                inverts --grep matches
+	  -t, --timeout <ms>          set test-case timeout in milliseconds [2000]
+	  -s, --slow <ms>             "slow" test threshold in milliseconds [75]
+	  -b, --bail                  bail after first test failure
+	  -A, --async-only            force all tests to take a callback (async)
+	  --globals <names>           allow the given comma-delimited global [names]
+	  --recursive                 include sub directories
+
+	  -d, --debug                 enable node's debugger, synonym for node --debug
+	  --debug-brk                 enable node's debugger breaking on the first line
+
+	  -R, --reporter <name>       specify the reporter to use
+	  -u, --ui <name>             specify user-interface (bdd|tdd|exports)
+
+	  --interfaces                display available interfaces
+	  --reporters                 display available reporters
+
+	  -w, --watch                 watch files for changes
