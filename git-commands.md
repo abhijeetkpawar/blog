@@ -41,5 +41,5 @@ Log Push/Pull/Fetch operations:
 `git reflog show origin/<branch>`
 
 **Cache credentials:**  
-`git config --global credential.helper cache`
+`git config --global credential.helper cache`  
 `git config --global credential.helper "cache --timeout=3600"`
