@@ -1,22 +1,23 @@
 ES6 Bullet points
 =================
 
-## Class ##  
+## Class 
 
 1. Classes are just syntactic sugar.  
 2. Instantiating an es6 class has same syntax as of prototypal way  
 3. `constructor()` is automatically called on creating instance of the class.  
 4. `extends` keyword is used to inherit from class  
 5. `super()` call returns the execution of same function from parent
-  
-    class LogView extends View {
-      render() {
-    	var compiled = super();
-    	console.log(compiled);
-      }
-    }
+```
+	class LogView extends View {
+	  render() {
+		var compiled = super();
+		console.log(compiled);
+	  }
+	}
+```
 
-## Promise ## 
+## Promise
 
 - A promise can only succeed or fail once. It cannot succeed or fail twice, neither can it switch from success to failure or vice-versa
 - If a promise has succeeded or failed and you later add a success/failure callback, the correct callback will be called, even though the event took place earlier
@@ -74,6 +75,6 @@ onFulfilled is called when/if "promise" resolves. onRejected is called when/if "
 Sugar for promise.then(undefined, onRejected)
 
 References:   
-Specification: https://promisesaplus.com/
-Polyfill: https://github.com/jakearchibald/ES6-Promises#readme
-MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+Specification: https://promisesaplus.com/  
+Polyfill: https://github.com/jakearchibald/ES6-Promises#readme  
+MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise  
